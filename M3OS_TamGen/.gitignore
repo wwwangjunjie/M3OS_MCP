@@ -1,0 +1,11 @@
+.venv/
+.venv.partial-gpfs/
+checkpoints/
+gpt_model/
+source/
+workspaces/
+*.log
+*.pid
+*.pid.stopped
+__pycache__/
+.pytest_cache/

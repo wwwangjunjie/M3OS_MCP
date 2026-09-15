@@ -1,0 +1,228 @@
+{
+    "Physicochemical": {
+        "molecular_weight": {
+            "Description": "Molecular weight",
+            "Units": "Dalton",
+            "Task_Type": "Regression"
+        },
+        "logP": {
+            "Description": "RDKit Crippen octanol/water partition coefficient (MolLogP)",
+            "Units": "log-ratio",
+            "Task_Type": "Regression"
+        },
+        "hydrogen_bond_acceptors": {
+            "Description": "Hydrogen bond acceptor count",
+            "Units": "count",
+            "Task_Type": "Regression"
+        },
+        "hydrogen_bond_donors": {
+            "Description": "Hydrogen bond donor count",
+            "Units": "count",
+            "Task_Type": "Regression"
+        },
+        "Lipinski": {
+            "Description": "Number of Lipinski rule-of-five criteria satisfied",
+            "Units": "count out of 4",
+            "Task_Type": "Regression"
+        },
+        "QED": {
+            "Description": "Quantitative estimate of drug-likeness",
+            "Units": "unitless (0-1)",
+            "Task_Type": "Regression"
+        },
+        "stereo_centers": {
+            "Description": "Stereocenter count",
+            "Units": "count",
+            "Task_Type": "Regression"
+        },
+        "tpsa": {
+            "Description": "Topological polar surface area",
+            "Units": "Å^2",
+            "Task_Type": "Regression"
+        }
+    },
+    "Absorption": {
+        "Caco2_Wang": {
+            "Description": "Cell effective permeability",
+            "Units": "cm/s",
+            "Task_Type": "Regression"
+        },
+        "HydrationFreeEnergy_FreeSolv": {
+            "Description": "Hydration free energy",
+            "Units": "kcal/mol",
+            "Task_Type": "Regression"
+        },
+        "Lipophilicity_AstraZeneca": {
+            "Description": "Lipophilicy",
+            "Units": "log-ratio",
+            "Task_Type": "Regression"
+        },
+        "Solubility_AqSolDB": {
+            "Description": "Aqueous solubility",
+            "Units": "log mol/L",
+            "Task_Type": "Regression"
+        },
+        "Bioavailability_Ma": {
+            "Description": "Oral bioavailability",
+            "Task_Type": "Classification"
+        },
+        "HIA_Hou": {
+            "Description": "Human intestinal absorption",
+            "Task_Type": "Classification"
+        },
+        "PAMPA_NCATS": {
+            "Description": "Permeability",
+            "Task_Type": "Classification"
+        },
+        "Pgp_Broccatelli": {
+            "Description": "P-glycoprotein inhibition",
+            "Task_Type": "Classification"
+        }
+    },
+    "Distribution": {
+        "PPBR_AZ": {
+            "Description": "Plasma protein binding rate",
+            "Units": "%",
+            "Task_Type": "Regression"
+        },
+        "VDss_Lombardo": {
+            "Description": "Volume of distribution at steady state",
+            "Units": "L/kg",
+            "Task_Type": "Regression"
+        },
+        "BBB_Martins": {
+            "Description": "Blood-brain barrier",
+            "Task_Type": "Classification"
+        }
+    },
+    "Excretion": {
+        "Clearance_Hepatocyte_AZ": {
+            "Description": "Hepatocyte drug clearance",
+            "Units": "uL.min-1.(10^6 cells)-1",
+            "Task_Type": "Regression"
+        },
+        "Clearance_Microsome_AZ": {
+            "Description": "Microsome drug clearance",
+            "Units": "mL.min-1.g-1",
+            "Task_Type": "Regression"
+        },
+        "Half_Life_Obach": {
+            "Description": "Half life",
+            "Units": "hr",
+            "Task_Type": "Regression"
+        }
+    },
+    "Toxicity": {
+        "LD50_Zhu": {
+            "Description": "Acute toxicity LD50",
+            "Units": "log(1/(mol/kg))",
+            "Task_Type": "Regression"
+        },
+        "AMES": {
+            "Description": "Mutagenicity",
+            "Task_Type": "Classification"
+        },
+        "Carcinogens_Lagunin": {
+            "Description": "Carcinogen",
+            "Task_Type": "Classification"
+        },
+        "ClinTox": {
+            "Description": "Toxicity in clinical trials",
+            "Task_Type": "Classification"
+        },
+        "DILI": {
+            "Description": "Drug induced liver injury",
+            "Task_Type": "Classification"
+        },
+        "hERG": {
+            "Description": "hERG blocking",
+            "Task_Type": "Classification"
+        },
+        "Skin_Reaction": {
+            "Description": "Skin reaction",
+            "Task_Type": "Classification"
+        },
+        "NR-AR": {
+            "Description": "Androgen Receptor (Full Length)",
+            "Task_Type": "Classification"
+        },
+        "NR-AR-LBD": {
+            "Description": "Androgen Receptor (Ligand Binding Domain)",
+            "Task_Type": "Classification"
+        },
+        "NR-AhR": {
+            "Description": "Aryl Hydrocarbon Receptor",
+            "Task_Type": "Classification"
+        },
+        "NR-Aromatase": {
+            "Description": "Aromatase",
+            "Task_Type": "Classification"
+        },
+        "NR-ER": {
+            "Description": "Estrogen Receptor (Full Length)",
+            "Task_Type": "Classification"
+        },
+        "NR-ER-LBD": {
+            "Description": "Estrogen Receptor (Ligand Binding Domain)",
+            "Task_Type": "Classification"
+        },
+        "NR-PPAR-gamma": {
+            "Description": "Peroxisome Proliferator-Activated Receptor Gamma",
+            "Task_Type": "Classification"
+        },
+        "SR-ARE": {
+            "Description": "Nuclear Factor (Erythroid-Derived 2)-Like 2/Antioxidant Responsive Element",
+            "Task_Type": "Classification"
+        },
+        "SR-ATAD5": {
+            "Description": "ATPase Family AAA Domain-Containing Protein 5 (ATAD5)",
+            "Task_Type": "Classification"
+        },
+        "SR-HSE": {
+            "Description": "Heat Shock Factor Response Element",
+            "Task_Type": "Classification"
+        },
+        "SR-MMP": {
+            "Description": "Mitochondrial Membrane Potential",
+            "Task_Type": "Classification"
+        },
+        "SR-p53": {
+            "Description": "Tumor Protein p53",
+            "Task_Type": "Classification"
+        }
+    },
+    "Metabolism": {
+        "CYP1A2_Veith": {
+            "Description": "CYP P450 1A2 inhibition",
+            "Task_Type": "Classification"
+        },
+        "CYP2C19_Veith": {
+            "Description": "CYP P450 2C19 inhibition",
+            "Task_Type": "Classification"
+        },
+        "CYP2C9_Substrate_CarbonMangels": {
+            "Description": "CYP2C9 substrate",
+            "Task_Type": "Classification"
+        },
+        "CYP2C9_Veith": {
+            "Description": "CYP P450 2C9 inhibition",
+            "Task_Type": "Classification"
+        },
+        "CYP2D6_Substrate_CarbonMangels": {
+            "Description": "CYP2D6 substrate",
+            "Task_Type": "Classification"
+        },
+        "CYP2D6_Veith": {
+            "Description": "CYP P450 2D6 inhibition",
+            "Task_Type": "Classification"
+        },
+        "CYP3A4_Substrate_CarbonMangels": {
+            "Description": "CYP3A4 substrate",
+            "Task_Type": "Classification"
+        },
+        "CYP3A4_Veith": {
+            "Description": "CYP P450 3A4 inhibition",
+            "Task_Type": "Classification"
+        }
+    }
+}

@@ -1,0 +1,57 @@
+# Python build and cache files
+**/__pycache__/
+**/.pytest_cache/
+**/.ruff_cache/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Per-service environments and credentials
+**/.venv/
+**/.nesso_venv/
+**/.env
+
+# Runtime state and outputs
+**/tmp/
+**/cache/
+**/*.log
+**/*.log.*
+**/*.pid
+**/*.pid.stopped
+**/*.sqlite
+**/*.sqlite3
+M3OS_Boltz_PLIP/boltz_output/
+M3OS_Nesso_Cofolding_local/nesso_runs/
+M3OS_TamGen/workspaces/
+M3OS_IUPAC/smiles_iupac_dict.json
+
+# Separately obtained upstream source trees
+M3OS_Boltz_PLIP/plip_source/
+M3OS_Nesso_Cofolding_local/vendor/
+M3OS_PSICHIC/source/
+M3OS_PSICHIC/vendor/
+M3OS_REINVENT/REINVENT4/
+M3OS_TamGen/source/
+
+# Model weights, priors, and downloaded assets
+*.ckpt
+*.pt
+*.pth
+*.prior
+*.safetensors
+M3OS_Boltz_PLIP/boltz_data/
+M3OS_Nesso_Cofolding_local/nesso_cache/
+M3OS_TamGen/checkpoints/
+M3OS_TamGen/gpt_model/
+
+# Download archives
+*.zip
+*.tar
+*.tar.gz
+
+# Editor and operating-system files
+.DS_Store
+.idea/
+.vscode/
+*~

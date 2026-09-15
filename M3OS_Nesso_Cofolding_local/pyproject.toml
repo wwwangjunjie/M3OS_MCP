@@ -1,0 +1,12 @@
+[project]
+name = "m3os-nesso-cofolding-mcp"
+version = "0.1.0"
+description = "M3OS MCP server for host-local, resident Nesso affinity inference"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp==1.14.0",
+    "pandas>=2.0",
+    "pydantic>=2.0",
+    "pydantic-settings==2.14.2",
+]

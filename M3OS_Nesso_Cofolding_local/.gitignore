@@ -1,0 +1,11 @@
+.venv/
+.nesso_venv/
+vendor/
+nesso_cache/
+nesso_runs/
+cache/
+*.log
+*.pid
+__pycache__/
+.pytest_cache/
+.ruff_cache/

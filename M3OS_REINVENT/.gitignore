@@ -1,0 +1,7 @@
+.venv
+REINVENT4/
+tmp/
+*.log
+*.pyc
+*.png
+

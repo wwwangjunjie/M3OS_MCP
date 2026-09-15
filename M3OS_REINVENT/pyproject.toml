@@ -1,0 +1,17 @@
+[project]
+name = "m3os-reinvent-mcp"
+version = "0.1.0"
+description = "M3OS MCP adapter for a separately installed REINVENT4 runtime"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "mcp==1.14.0",
+    "pandas>=2,<3",
+    "rdkit>=2024.3",
+]
+
+[dependency-groups]
+dev = ["pytest>=8,<9"]
+
+[tool.pytest.ini_options]
+addopts = "-q"

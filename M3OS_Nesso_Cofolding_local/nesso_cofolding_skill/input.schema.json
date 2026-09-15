@@ -1,0 +1,113 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "job_name": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Task name used in result filenames.",
+      "title": "Job Name"
+    },
+    "protein_fasta_path": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Protein FASTA path. Provide exactly one of this field and protein_sequence.",
+      "title": "Protein Fasta Path"
+    },
+    "protein_sequence": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Raw protein sequence. Whitespace is removed and the sequence is written to a FASTA file before inference. Provide exactly one of this field and protein_fasta_path.",
+      "title": "Protein Sequence"
+    },
+    "protein_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Optional FASTA record ID used with protein_sequence.",
+      "title": "Protein Id"
+    },
+    "ligand_csv_path": {
+      "description": "CSV containing ligand SMILES and an optional compound ID column.",
+      "title": "Ligand Csv Path",
+      "type": "string"
+    },
+    "smiles_column": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "SMILES column; auto-detected when omitted.",
+      "title": "Smiles Column"
+    },
+    "ligand_id_column": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Compound ID column; auto-detected when omitted.",
+      "title": "Ligand Id Column"
+    },
+    "max_ligands": {
+      "anyOf": [
+        {
+          "minimum": 1,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Use only the first N rows for an explicit smoke test.",
+      "title": "Max Ligands"
+    },
+    "prepare_only": {
+      "default": false,
+      "description": "Generate YAML inputs without model inference.",
+      "title": "Prepare Only",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "ligand_csv_path"
+  ],
+  "title": "nesso-cofolding-local input",
+  "type": "object"
+}

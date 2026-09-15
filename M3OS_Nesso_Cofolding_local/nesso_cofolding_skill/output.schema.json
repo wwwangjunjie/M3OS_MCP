@@ -1,0 +1,237 @@
+{
+  "$defs": {
+    "ResultRow": {
+      "additionalProperties": true,
+      "properties": {
+        "rank": {
+          "title": "Rank",
+          "type": "integer"
+        },
+        "ligand_id": {
+          "title": "Ligand Id",
+          "type": "string"
+        },
+        "smiles": {
+          "title": "Smiles",
+          "type": "string"
+        },
+        "nesso_record_id": {
+          "title": "Nesso Record Id",
+          "type": "string"
+        },
+        "nesso_affinity_pred_value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Nesso Affinity Pred Value"
+        },
+        "nesso_affinity_probability_binary": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Nesso Affinity Probability Binary"
+        },
+        "nesso_entropy_pl": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Nesso Entropy Pl"
+        },
+        "nesso_entropy_crop_pl": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Nesso Entropy Crop Pl"
+        },
+        "status": {
+          "title": "Status",
+          "type": "string"
+        },
+        "confidence_warning": {
+          "default": "",
+          "title": "Confidence Warning",
+          "type": "string"
+        },
+        "error": {
+          "default": "",
+          "title": "Error",
+          "type": "string"
+        }
+      },
+      "required": [
+        "rank",
+        "ligand_id",
+        "smiles",
+        "nesso_record_id",
+        "status"
+      ],
+      "title": "ResultRow",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "success": {
+      "title": "Success",
+      "type": "boolean"
+    },
+    "job_name": {
+      "title": "Job Name",
+      "type": "string"
+    },
+    "output_dir": {
+      "title": "Output Dir",
+      "type": "string"
+    },
+    "result_csv": {
+      "title": "Result Csv",
+      "type": "string"
+    },
+    "summary_json": {
+      "title": "Summary Json",
+      "type": "string"
+    },
+    "input_manifest_csv": {
+      "default": "",
+      "title": "Input Manifest Csv",
+      "type": "string"
+    },
+    "n_input_rows": {
+      "default": 0,
+      "title": "N Input Rows",
+      "type": "integer"
+    },
+    "n_success": {
+      "default": 0,
+      "title": "N Success",
+      "type": "integer"
+    },
+    "n_failed": {
+      "default": 0,
+      "title": "N Failed",
+      "type": "integer"
+    },
+    "n_low_confidence": {
+      "default": 0,
+      "title": "N Low Confidence",
+      "type": "integer"
+    },
+    "best_ligand_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Best Ligand Id"
+    },
+    "best_nesso_affinity_pred_value": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Best Nesso Affinity Pred Value"
+    },
+    "best_nesso_affinity_probability_binary": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Best Nesso Affinity Probability Binary"
+    },
+    "wall_seconds": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Wall Seconds"
+    },
+    "gpu_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Gpu Ids",
+      "type": "array"
+    },
+    "results": {
+      "items": {
+        "$ref": "#/$defs/ResultRow"
+      },
+      "title": "Results",
+      "type": "array"
+    },
+    "command": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Command",
+      "type": "array"
+    },
+    "error_code": {
+      "default": "",
+      "title": "Error Code",
+      "type": "string"
+    },
+    "error_message": {
+      "default": "",
+      "title": "Error Message",
+      "type": "string"
+    },
+    "metadata": {
+      "additionalProperties": true,
+      "title": "Metadata",
+      "type": "object"
+    }
+  },
+  "required": [
+    "success",
+    "job_name",
+    "output_dir",
+    "result_csv",
+    "summary_json"
+  ],
+  "title": "nesso-cofolding-local output",
+  "type": "object"
+}
